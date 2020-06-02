@@ -22,11 +22,7 @@
     </style>
 </head>
 <body>
-    <div class="ready-player-1">
-        <audio id="stream" crossorigin preload="none">
-            <source src="http://167.114.116.95:8008/stream" type="audio/mpeg">
-        </audio>
-    </div>
+
 
     <script src="radio.js"></script>
     <script>
@@ -34,16 +30,16 @@
             new GreenAudioPlayer('.ready-player-1', { showTooltips: true, showDownloadButton: false, enableKeystrokes: true });
         });
     </script>
-	
+	 <div class="ready-player-1">
 	<table class="center">
 <audio id="stream" controls="" preload="none" autoplay="" style="width: 300px;">
-<source src="http://live.radioclick.ro:8008/;" type="audio/mpeg">
+<source src="http://167.114.116.95:8008/stream" type="audio/mpeg">
 </audio>
 <script type="text/javascript">
 var audio = document.getElementById('stream');
 audio.volume = 0.5;
 </script>
 </table>
-	
+	  </div>
 </body>
 </html>
