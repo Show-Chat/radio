@@ -1,180 +1,170 @@
-.player {
-  position: relative;
-  width: 500px;
-  height: 60px;
-  background-color: rgba(0,0,0,0.2);
-  display: flex;
-  border-radius: 2px;
-  padding: 5 16px;
-  img {
-    margin-top: 5px;
-    width: 60px;
-    height: 50px;
-  }
-  .info {
+@keyframes spin {
+  from {
+    transform: rotateZ(0); }
+  to {
+    transform: rotateZ(1turn); } }
+
+.green-audio-player {
+  width: 400px;
+  min-width: 300px;
+  height: 56px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 4px;
+  user-select: none;
+  background-color: #fff;
+  box-sizing: border-box;
+  outline: none; }
+  .green-audio-player.player-accessible .play-pause-btn:hover,
+  .green-audio-player.player-accessible .controls:hover,
+  .green-audio-player.player-accessible .volume__button:hover,
+  .green-audio-player.player-accessible .volume__controls:hover,
+  .green-audio-player.player-accessible .download:hover {
+    outline: dotted 1px #999; }
+  .green-audio-player svg,
+  .green-audio-player img {
+    display: block; }
+  .green-audio-player .holder {
+    position: relative; }
+    .green-audio-player .holder .loading .loading__spinner {
+      position: absolute;
+      left: -3px;
+      bottom: 2px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #b0b0b0;
+      border-right-color: rgba(0, 0, 0, 0);
+      border-radius: 50%;
+      animation: spin 0.4s linear infinite; }
+    .green-audio-player .holder .play-pause-btn {
+      visibility: hidden;
+      cursor: pointer;
+      outline: none; }
+      .green-audio-player .holder .play-pause-btn:focus {
+        outline: none; }
+  .green-audio-player .slider {
+    flex-grow: 1;
+    background-color: #d8d8d8;
+    cursor: pointer;
+    position: relative; }
+    .green-audio-player .slider .gap-progress {
+      background-color: #44bfa3;
+      border-radius: inherit;
+      position: absolute;
+      pointer-events: none; }
+      .green-audio-player .slider .gap-progress .pin {
+        height: 16px;
+        width: 16px;
+        border-radius: 8px;
+        background-color: #44bfa3;
+        position: absolute;
+        pointer-events: all;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.32); }
+        .green-audio-player .slider .gap-progress .pin::after {
+          content: "";
+          display: block;
+          background: rgba(0, 0, 0, 0);
+          width: 200%;
+          height: 200%;
+          margin-left: -50%;
+          margin-top: -50%;
+          border-radius: 50%; }
+  .green-audio-player .controls {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #55606e;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    width: 50%;
-    padding: 0 16px;
-    .name {
-      font-size: 15px;
-      font-weight: 700;
-    }
-    .singer {
-      font-size: 12px;
-    }
-  }
-  .btns {
-    width: 50%;
-    display: flex;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
-    
-    div:nth-child(1) {
-            font-size: 30px;
-        }
-        div:nth-child(2), div:nth-child(3) {
-            font-size: 18px;
-        }
-    
-  }
-  .progress {
-    position: absolute;
-    height: 2px;
-    left: 0;
-    top: 0;
-    background-color: #00a8ff;
-  }
-}
+    margin-left: 15px;
+    margin-right: 15px;
+    outline: none; }
+    .green-audio-player .controls .controls__slider {
+      margin-left: 16px;
+      margin-right: 16px;
+      border-radius: 2px;
+      height: 4px; }
+      .green-audio-player .controls .controls__slider .controls__progress {
+        width: 0;
+        height: 100%; }
+        .green-audio-player .controls .controls__slider .controls__progress .progress__pin {
+          right: -8px;
+          top: -6px; }
+    .green-audio-player .controls span {
+      cursor: default; }
+    .green-audio-player .controls:focus {
+      outline: none; }
+  .green-audio-player .volume {
+    position: relative; }
+    .green-audio-player .volume .volume__button {
+      cursor: pointer;
+      outline: none; }
+      .green-audio-player .volume .volume__button:focus {
+        outline: none; }
+      .green-audio-player .volume .volume__button.open path {
+        fill: #44bfa3; }
+    .green-audio-player .volume .volume__controls {
+      width: 30px;
+      height: 135px;
+      background-color: rgba(0, 0, 0, 0.62);
+      border-radius: 7px;
+      position: absolute;
+      left: -3px;
+      bottom: 52px;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      z-index: 2;
+      outline: none; }
+      .green-audio-player .volume .volume__controls .volume__slider {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 6px;
+        border-radius: 3px; }
+        .green-audio-player .volume .volume__controls .volume__slider .volume__progress {
+          bottom: 0;
+          height: 100%;
+          width: 6px; }
+          .green-audio-player .volume .volume__controls .volume__slider .volume__progress .volume__pin {
+            left: -5px;
+            top: -8px; }
+      .green-audio-player .volume .volume__controls:focus {
+        outline: none; }
+      .green-audio-player .volume .volume__controls.hidden {
+        display: none; }
+      .green-audio-player .volume .volume__controls.top {
+        bottom: 52px;
+        left: -3px; }
+      .green-audio-player .volume .volume__controls.middle {
+        bottom: -54px;
+        left: 54px; }
+      .green-audio-player .volume .volume__controls.bottom {
+        bottom: -164px;
+        left: -3px; }
+  .green-audio-player .download {
+    display: none;
+    margin-left: 16px;
+    cursor: pointer;
+    outline: none; }
+    .green-audio-player .download:focus {
+      outline: none; }
+  .green-audio-player:focus {
+    outline: none; }
 
-
-@font-face {
-    font-family: iconfont;
-    src: url('//static0.qianqian.com/web/st/font/iconfont-4e6.woff') format('woff')
-}
-
-.iconfont {
-        font-family: iconfont!important;
-        font-size: 16px;
-        font-style: normal;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale
-    }
-
-    .icon-list:before {
-        content: "\e603"
-    }
-    
-    .icon-loop-single:before {
-        content: "\e604"
-    }
-    
-    .icon-arrow-right:before {
-        content: "\e605"
-    }
-    
-    .icon-loop:before {
-        content: "\e606"
-    }
-    
-    .icon-prev:before {
-        content: "\e607"
-    }
-    
-    .icon-favor:before {
-        content: "\e608"
-    }
-    
-    .icon-next:before {
-        content: "\e60a"
-    }
-    
-    .icon-download:before {
-        content: "\e60b"
-    }
-    
-    .icon-search:before {
-        content: "\e60c"
-    }
-    
-    .icon-zhanwei1:before {
-        content: "\e610"
-    }
-    
-    .icon-favor1:before {
-        content: "\e618"
-    }
-    
-    .icon-random:before {
-        content: "\e619"
-    }
-    
-    .icon-play:before {
-        content: "\e616"
-    }
-    
-    .icon-stop:before {
-        content: "\e617"
-    }
-    
-    .icon-mv:before {
-        content: "\e61b"
-    }
-    
-    .icon-arrow-down:before {
-        content: "\e61d"
-    }
-    
-    .icon-arrow-left:before {
-        content: "\e61e"
-    }
-    
-    .icon-arrow-up:before {
-        content: "\e61f"
-    }
-    
-    .icon-listen:before {
-        content: "\e609"
-    }
-    
-    .icon-round:before {
-        content: "\e60d"
-    }
-    
-    .icon-triangle:before {
-        content: "\e60e"
-    }
-    
-    .icon-information:before {
-        content: "\e60f"
-    }
-    
-    .icon-home:before {
-        content: "\e611"
-    }
-    
-    .icon-i:before {
-        content: "\e612"
-    }
-    
-    .icon-information-:before {
-        content: "\e613"
-    }
-    
-    .icon-bubble-filled-icon:before {
-        content: "\e614"
-    }
-    
-    .icon-round-right:before {
-        content: "\e615"
-    }
-    
-    .icon-vip:before {
-        content: "\e61a"
-    }
-    
-    .icon-word:before {
-        content: "\e61c"
-    }
+.message__offscreen {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal; }
