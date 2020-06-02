@@ -7,6 +7,18 @@
   <body>
 <div class='player'>
    <img src='rcr.png'/>
+   <div class='info'>
+    <div class='name'>RadioClick</div>
+    <div class='singer'>Romania</div>
+  </div>
+  <div class='btns'>
+    <div class="iconfont play-pause icon-play"></div>
+    <div class="iconfont next icon-next"></div>
+  </div>
+  <div class='progress'>
+    
+  </div>
+</div>
 <table class="center">
 <audio id="stream" controls="" preload="none" autoplay="" style="width: 90%;">
 <source src="http://live.radioclick.ro:8008/;" type="audio/mpeg">
