@@ -29,5 +29,7 @@ audio.volume = 0.5;
 </script>
 </table
   </div>
+  
+  <script src="radio.js"></script>
 </body>
 </html>
