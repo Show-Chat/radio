@@ -6,6 +6,7 @@
 </head>
   <body>
 <div class='player'>
+   <img src='rcr.png'/>
 <table class="center">
 <audio id="stream" controls="" preload="none" autoplay="" style="width: 90%;">
 <source src="http://live.radioclick.ro:8008/;" type="audio/mpeg">
