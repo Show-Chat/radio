@@ -8,7 +8,7 @@
         var settings = $.extend({
             ip : "",
             port: "",
-            protocol: "https://",
+            protocol: "http://",
             emptyCoverImgUrl: "img/no-cover.jpg",
             autoplay:true,
             volume:0.5,
