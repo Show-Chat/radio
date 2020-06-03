@@ -39,7 +39,7 @@
         if(settings.facebookUrl == false){ $("#garlitoFacebookUrl").css("display", "none"); }
         if(settings.instagramUrl == false){ $("#garlitoInstagramUrl").css("display", "none"); }
 
-        if(settings.facebookUrl == false && settings.instagramUrl == false ){ $(".social-media").css("display", "none"); }
+        if(settings.facebookUrl == false && settings.instagramUrl == false && settings.githubUrl == false ){ $(".social-media").css("display", "none"); }
 
 
 
