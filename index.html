@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>RadioClick Romania www.radioclick.ro</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="radio.css">
-    <style>
-        html, body { height: 100%; }
+    <title>Asculta RadioClick Romania</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
 
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #F8FFAE;
-            background: -webkit-linear-gradient(-65deg, #43C6AC, #F8FFAE);
-            background: linear-gradient(-65deg, #43C6AC, #F8FFAE);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-    </style>
+    <!-- RCR CSS -->
+    <link rel="stylesheet" href="src/css/rcr.css">
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+
 </head>
-<body>
+<body style="background:#34495e;">
 
+<div style="margin-top:15%;text-align:center;">
+    <h1 style="color:white;text-align:center;font-family: 'Raleway', sans-serif;letter-spacing:5px;font-weight:300; font-size:50px;  ">Asculta</h1>
+    <p style="color:white;text-align:center;font-family: 'Raleway', sans-serif;letter-spacing:5px;font-weight:300; font-size:18px;  ">RadioClick Romania</p>
 
-    <script src="radio.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new GreenAudioPlayer('.ready-player-1', { showTooltips: true, showDownloadButton: false, enableKeystrokes: true });
-        });
-    </script>
-	 <div class="ready-player-1">
+    <button id="ListenButton" style="margin-top:40px;background:#2ecc71;width:200px;height:60px;border-radius:30px; font-weight:bold;border:0;color:#34495e;font-size:17px;"> Ascultă acum</button>
+</div>
 
-<audio id="stream" controls="" preload="none">
-<source src="http://167.114.116.95:8008/stream" type="audio/mpeg">
-</audio>
-<script type="text/javascript">
-var audio = document.getElementById('stream');
-audio.volume = 0.5;
+<div id="radioclick"></div>
+
+<!-- Jquery 3.3.1 -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- Howler Lib -->
+<script src="src/js/howler.min.js" ></script>
+<!-- RCR RadioClick JS -->
+<script type="text/javascript" src="src/js/rcr.js"></script>
+
+<script>
+    $( "#radioclick" ).RadioClickPlayer({
+        ip: "167.114.207.230",
+        port: "8008",
+        volume: 1,
+        facebookUrl: "https://facebook.com/",
+        instagramUrl: "https://instagram.com",
+        radioName : "RadioClick Romania",
+        popup:true,
+        lastFmApiKey:"85d4e735d8374226a892f97260219982",
+        listenButtonId:"#ListenButton"
+    });
 </script>
 
-	  </div>
 </body>
 </html>
