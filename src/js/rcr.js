@@ -18,9 +18,9 @@
             instagramUrl: false,
             githubUrl: false,
             logoUrl: "img/logo.png",
-            radioName : " Radio Station Name",
+            radioName : " 🎧 RadioClick Romania",
             listenButtonId:"",
-            nowPlayingText:"Now Playing:",
+            nowPlayingText:"🎧 Acuma pe RadioClick:",
 
         }, options);
 
