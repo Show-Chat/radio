@@ -33,6 +33,7 @@
 <script type="text/javascript" src="src/js/rcr.js"></script>
 
 <script>
+    <audio controls="true" preload="none"><source src="http://live.radioclick.ro:8008/;stream.mp3" type="audio/mp3">
     $( "#radioclick" ).RadioClickPlayer({
         ip: "167.114.207.230",
         port: "8008",
@@ -41,6 +42,7 @@
         instagramUrl: "https://instagram.com",
         radioName : "🎧 RadioClick Romania",
         popup:true,
+        autoplay: true,
         lastFmApiKey:"85d4e735d8374226a892f97260219982",
         listenButtonId:"#ListenButton"
     });
