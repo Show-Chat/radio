@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Asculta RadioClick Romania</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+    <!-- RCR CSS -->
+    <link rel="stylesheet" href="src/css/rcr.css">
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+
+</head>
+<body style="background:#34495e;">
+
+<div style="margin-top:15%;text-align:center;">
+    <h1 style="color:white;text-align:center;font-family: 'Raleway', sans-serif;letter-spacing:5px;font-weight:300; font-size:50px;  ">Asculta</h1>
+    <p style="color:white;text-align:center;font-family: 'Raleway', sans-serif;letter-spacing:5px;font-weight:300; font-size:18px;  ">🎧 RadioClick Romania</p>
+
+    <button id="ListenButton" style="margin-top:40px;background:#2ecc71;width:200px;height:60px;border-radius:30px; font-weight:bold;border:0;color:#34495e;font-size:17px;"> Ascultă acum</button>
+</div>
+
+<div id="radioclick"></div>
+
+<!-- Jquery 3.3.1 -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- Howler Lib -->
+<script src="src/js/howler.min.js" ></script>
+<!-- RCR RadioClick JS -->
+<script type="text/javascript" src="src/js/rcr.js"></script>
+
+<script>
+    $( "#radioclick" ).RadioClickPlayer({
+        ip: "167.114.207.230",
+        port: "8008",
+        volume: 1,
+        facebookUrl: "https://facebook.com/",
+        instagramUrl: "https://instagram.com",
+        githubUrl: "https://github.com",
+        radioName : "🎧 RadioClick Romania",
+        popup:true,
+        autoplay: true,
+        lastFmApiKey:"85d4e735d8374226a892f97260219982",
+        listenButtonId:"#ListenButton"
+    });
+    
+</script>
+
+</body>
+</html>
