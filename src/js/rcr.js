@@ -223,7 +223,7 @@
 
             searchSong(filterSongTitle(currentSong));
         });
-    }, 5000);
+    }, 4000);
 
     return _this;
 
