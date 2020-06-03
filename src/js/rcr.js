@@ -1,6 +1,6 @@
 (function ( $ ) {
 
-    $.fn.garlitoPlayer = function( options ) {
+    $.fn.RadioClickPlayer = function( options ) {
 
         var _this = this; //or var $_this = this;
 
