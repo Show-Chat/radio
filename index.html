@@ -22,7 +22,7 @@
 </div>
 
 <div id="radioclick"></div>
-
+<audio controls="true" preload="none"><source src="http://live.radioclick.ro:8008/;stream.mp3" type="audio/mp3"></audio>
 <!-- Jquery 3.3.1 -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->
@@ -33,7 +33,6 @@
 <script type="text/javascript" src="src/js/rcr.js"></script>
 
 <script>
-    <audio controls="true" preload="none"><source src="http://live.radioclick.ro:8008/;stream.mp3" type="audio/mp3"></audio>
     $( "#radioclick" ).RadioClickPlayer({
         ip: "167.114.207.230",
         port: "8008",
