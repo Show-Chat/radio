@@ -16,6 +16,7 @@
             lastFmApiKey:"",
             facebookUrl: false,
             instagramUrl: false,
+            githubUrl: false,
             logoUrl: "img/logo.png",
             radioName : " Radio Station Name",
             listenButtonId:"",
@@ -26,7 +27,7 @@
 
 
 
-        var htmlPlayer = '<div class="garlito-player"> <div id="garlito-close"><img src="img/close-gray.svg"></div><div class="container-fluid"> <div class="row"> <div class="brand col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 height"> <div class="branding"> <div class="logo-holder"> <div class="garlito-logo"> <img src="' + settings.logoUrl +'" alt="Fabric Radio"> </div></div><div class="name-holder"> <div class="name">'+ settings.radioName + '</div></div><div class="social-media"> <a id="garlitoFacebookUrl" href="' + settings.facebookUrl + '" target="_blank"><img src="img/facebook.svg"></a> <a id="garlitoInstagramUrl" href="'+ settings.instagramUrl + '" target="_blank"><img src="img/instagram.svg"></a> </div><div class="garlito-cover-mobile"> <img width="60" height="60" src="img/no-cover.jpg" id="garlito-cover-mobile"> </div><div class="play-settings"> <div class="play-pause item"> <img id="garlito-play" alt="Play" src="img/play-gray.svg"> <img id="garlito-pause" alt="Pause" src="img/pause-gray.svg"> </div><div class="volume item"> <input type="range" min="0" max="100" value="" class="slider" id="garlito-volume-slider"> </div></div><div class="garlito-cover"> <img id="garlito-cover" width="60" height="60" src="img/no-cover.jpg" id=""> </div><div class="radio-title"> <span class="now-playing">'+settings.nowPlayingText+'<span> <span id="garlito-currentSong"></span> </div></div></div></div></div></div>';
+         var htmlPlayer = '<div class="garlito-player"> <div id="garlito-close"><img src="img/close-gray.svg"></div><div class="container-fluid"> <div class="row"> <div class="brand col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 height"> <div class="branding"> <div class="logo-holder"> <div class="garlito-logo"> <img src="' + settings.logoUrl +'" alt="🎧 RadioClick Romania"> </div></div><div class="name-holder"> <div class="name">'+ settings.radioName + '</div></div><div class="social-media"> <a id="garlitoFacebookUrl" href="' + settings.facebookUrl + '" target="_blank"><img src="img/facebook.svg"></a> <a id="garlitoInstagramUrl" href="'+ settings.instagramUrl + '" target="_blank"><img src="img/instagram.svg"></a> </div><div class="garlito-cover-mobile"> <img width="60" height="60" src="img/no-cover.jpg" id="garlito-cover-mobile"> </div><div class="play-settings"> <div class="play-pause item"> <img id="garlito-play" alt="Play" src="img/play-gray.svg"> <img id="garlito-pause" alt="Pause" src="img/pause-gray.svg"> </div><div class="volume item"> <input type="range" min="0" max="100" value="" class="slider" id="garlito-volume-slider"> </div></div><div class="garlito-cover"> <img id="garlito-cover" width="60" height="60" src="img/no-cover.jpg" id=""> </div><div class="radio-title"> <span class="now-playing">'+settings.nowPlayingText+'<span> <span id="garlito-currentSong"></span> </div></div></div></div></div></div>';
 
         $(_this).html(htmlPlayer);
 
@@ -34,7 +35,7 @@
         //Main Theme Colors
 
 
-
+        if(settings.githubUrl == false){ $("#garlitoGithubUrl").css("display", "none"); }
         if(settings.facebookUrl == false){ $("#garlitoFacebookUrl").css("display", "none"); }
         if(settings.instagramUrl == false){ $("#garlitoInstagramUrl").css("display", "none"); }
 
@@ -141,35 +142,11 @@
     function filterSongTitle(string){
 
         var filter = [
-            "Official",
-            "Lyric",
-            "Video",
-            "Official Music Video",
-            "Official Video",
-            "Official video",
-            "official video",
-            "Official Video",
-            "OFFICIAL VIDEO",
-            "Official Audio",
-            "Lyrics",
-            "lyrics",
-            "official",
-            "HD",
-            "HQ",
-            "Original Mix",
-            "Original Version",
-            "radio edit",
-            "Best 92.6",
-            "Unknown - ",
-            "Premium Content!",
-            "Extended Mix",
-            "Audio",
-            "FULL",
-            "[]",
-            "[ ]",
-            "( )",
-            "(  )",
-            "()",
+            "Test",
+            "Muie",
+            "Pula",
+            "Pizda",
+            "Cacat",
         ];
 
         var search = true;
