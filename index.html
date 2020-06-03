@@ -18,7 +18,9 @@
     <h1 style="color:white;text-align:center;font-family: 'Raleway', sans-serif;letter-spacing:5px;font-weight:300; font-size:50px;  ">Asculta</h1>
     <p style="color:white;text-align:center;font-family: 'Raleway', sans-serif;letter-spacing:5px;font-weight:300; font-size:18px;  ">🎧 RadioClick Romania</p>
 
-    <button id="ListenButton" style="margin-top:40px;background:#2ecc71;width:200px;height:60px;border-radius:30px; font-weight:bold;border:0;color:#34495e;font-size:17px;"> Ascultă acum</button>
+    <button id="ListenButton" style="margin-top:40px;background:#2ecc71;width:200px;height:60px;border-radius:30px; font-weight:bold;border:0;color:#34495e;font-size:17px;"> Ascultă acum <audio id="stream" controls="" preload="none" autoplay="" style="width: 300px;">
+<source src="http://live.radioclick.ro:8008/;" type="audio/mpeg">
+</audio></button>
 </div>
 
 <div id="radioclick"></div>
@@ -34,10 +36,6 @@
 
 <script>
     $( "#radioclick" ).RadioClickPlayer({
-        controls="true",
-        preload="none",
-        source src="http://live.radioclick.ro:8008/;stream.mp3",
-        type="audio/mp3",
         ip: "167.114.207.230",
         port: "8008",
         volume: 1,
