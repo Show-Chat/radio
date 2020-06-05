@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
 </head>
-<body>
-    <div class="nowplaying"></div>
-    <script src="https://cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js"></script>
-    <script>
+<body>  
+  <script type="text/JavaScript">
+  function httpGet(theUrl)
+  {
+    var xmlHttp = null;
 
-        setInterval(function() {
-            $.ajax({
-                url: "http://live.radioclick.ro:8008/currentsong?sid=1",
-                dataType: "html",
-                success: function(data) {
-                    $('.nowplaying').text(data);
-                    console.log(data);
-                }
-            }); 
-        }, 5000);   
-
-    </script>
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
+  document.write(httpGet("http://live.radioclick.ro:8008/currentsong?sid=1"));
+  </script>
 </body>
 </html>
