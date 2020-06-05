@@ -21,5 +21,26 @@
         }, 3000);   
 
     </script>
+        
+        
+         setInterval(function(){
+        $.getJSON('http://live.radioclick.ro:8008/currentsong?sid=1' + statisticsUrl, function(data) {
+
+            var song = data.streams[0].songtitle;
+            //song = song.split(" - ");
+            //song = song[1] + " - " + song[2];
+            var currentSong =song;
+            current_song.empty();
+            current_song.append(filterSongTitle(currentSong));
+            searchSong(filterSongTitle(currentSong));
+        });
+    }, 5000);
+
+    return _this;
+    };
+        
+    <div class="radio-title"> 
+    <span class="now-playing">'+settings.nowPlayingText+'<span> <span id="currentSong"></span> </div>    
+        
 </body>
 </html>
