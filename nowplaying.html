@@ -22,7 +22,8 @@
 
     </script>
         
-        
+        <script>
+        (function ( $ ) {
          setInterval(function(){
         $.getJSON('http://live.radioclick.ro:8008/currentsong?sid=1' + statisticsUrl, function(data) {
 
@@ -38,9 +39,8 @@
 
     return _this;
     };
-        
-    <div class="radio-title"> 
-    <span class="now-playing">'+settings.nowPlayingText+'<span> <span id="currentSong"></span> </div>    
+     }( jQuery ));   
+  </script>
         
 </body>
 </html>
