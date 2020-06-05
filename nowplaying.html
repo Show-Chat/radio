@@ -24,7 +24,22 @@
 <div class="garlito-player">
 </div><div class="radio-title"> <span class="now-playing">'+settings.nowPlayingText+'<span> <span id="garlito-currentSong"></span> </div></div></div></div></div></div>';
 
-  
+  <script>
+    $( "#radioclick" ).RadioClickPlayer({
+        ip: "167.114.207.230",
+        port: "8008",
+        volume: 0,
+        facebookUrl: "https://facebook.com/",
+        instagramUrl: "https://instagram.com",
+      //  githubUrl: "https://github.com",
+        radioName : "🎧 RadioClick Romania",
+        popup: false,
+        autoplay: true,
+        lastFmApiKey:"8648cc1b86ab1d6c339c22485dabaf0b",
+        listenButtonId:"#ListenButton"
+    });
+    
+</script>
   
 </body>
 </html>
