@@ -6,8 +6,8 @@
 
         // Default Variables
         var settings = $.extend({
-            ip : "",
-            port: "",
+            ip : "167.114.207.230",
+            port: "8008",
             protocol: "http://",
             emptyCoverImgUrl: "img/no-cover.jpg",
             autoplay:true,
