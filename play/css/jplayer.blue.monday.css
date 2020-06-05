@@ -73,17 +73,17 @@ a.jp-pause {
 }
 
 a.jp-play {
-	background: url("./img/player-controls.gif") -10px -8px no-repeat;
+	background: url("/play/img/player-controls.gif") -10px -8px no-repeat;
 }
 a.jp-play:hover {
-	background: url("./img/player-controls.gif") -79px -8px no-repeat;
+	background: url("/play/img/player-controls.gif") -79px -8px no-repeat;
 }
 a.jp-pause {
-	background: url("./img/player-controls.gif") -10px -78px no-repeat;
+	background: url("./play/img/player-controls.gif") -10px -78px no-repeat;
 	display: none;
 }
 a.jp-pause:hover {
-	background: url("./img/player-controls.gif") -79px -78px no-repeat;
+	background: url("./play/img/player-controls.gif") -79px -78px no-repeat;
 }
 
 /* @end */
