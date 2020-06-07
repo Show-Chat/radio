@@ -16,8 +16,8 @@ body {
 .player {
 	position:relative;
 	
-	width:730px;
-	height:202px;
+	width:70%;
+	height:20%;
 	
 	background:rgb(240,243,248);
 	border-radius:8px;
