@@ -36,6 +36,18 @@
 		facebook = false;
 	</script>
 	<script type="text/javascript" src="js/main.js"></script>
+	
+	<script>
+$.SHOUTcast({
+   host : '167.114.207.230',
+   port : 8008,
+   interval : 5000,
+   stats : function(){
+      $('#songtitle').text(this.get('songtitle'));
+   }
+}).startStats();
+</script>
+	
 </head>
 <!-- <body> -->
 <body style="background:#34495e;">
