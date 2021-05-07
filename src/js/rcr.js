@@ -6,9 +6,9 @@
 
         // Default Variables
         var settings = $.extend({
-            ip : "167.114.207.230",
+            ip : "baiatrau.cors-proxy.ml/http://live.radioclick.ro",
             port: "8008",
-            protocol: "http://",
+            protocol: "https://",
             emptyCoverImgUrl: "img/no-cover.jpg",
             autoplay:true,
             volume:0.5,
